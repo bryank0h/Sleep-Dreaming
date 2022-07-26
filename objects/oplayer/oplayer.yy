@@ -4,7 +4,10 @@
     "name": "sPlayer",
     "path": "sprites/sPlayer/sPlayer.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sPlayer",
+    "path": "sprites/sPlayer/sPlayer.yy",
+  },
   "visible": true,
   "solid": false,
   "persistent": false,
