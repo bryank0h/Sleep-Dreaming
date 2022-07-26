@@ -1,0 +1,1 @@
+playerCanEnter = 0;
