@@ -21,6 +21,4 @@ flash = 0;
 darken = 0;
 vulnerable = 0;
 dead = 0;
-
-
-
+heartWithMe = true;

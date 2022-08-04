@@ -90,5 +90,4 @@ if (dead == 0)
 		instance_destroy(oPlayer);
 		dead = 1;
 	}
-
 }

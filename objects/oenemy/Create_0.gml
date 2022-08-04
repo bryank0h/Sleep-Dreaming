@@ -4,7 +4,13 @@ image_speed = 0;
 hSpeed = 1;
 vSpeed = 1;
 speedWalk = 0.7;
-playerDead = 0;
+playerDead = false;
+appear = 200;
+visible = false;
+heartAttack = false;
+heartAttackDelay = 0;
+heartAttackChecked = false;
+heartAttackDelaySet = false;
 
 
 
