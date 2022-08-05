@@ -78,7 +78,8 @@ if (dead == 0)
 
 		if (vulnerable == 0) 
 		{
-			HP -= 2;
+			HP--;
+			global.playerHP = HP;
 			flash = 15;
 			HPDeducted = true;
 		}
@@ -86,10 +87,11 @@ if (dead == 0)
 		vulnerable = 5;
 	}
 	
-	if (HP < 0)
+	if (HP <= 0)
 	{
 		instance_deactivate_object(oPlayer);
 		instance_create_layer(x,y,"Player", oDead);
+		global.playerHP = 5;
 		instance_destroy(oPlayer);
 		screenshake(30, 5, 0.2);
 		dead = 1;
