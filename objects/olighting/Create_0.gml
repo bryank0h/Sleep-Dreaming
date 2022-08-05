@@ -10,3 +10,5 @@ draw_clear_alpha(c_black, 0);
 
 // Reset target surface back to the application surface
 surface_reset_target();
+
+lightingRadius = 0;

@@ -18,57 +18,53 @@ if (instance_exists(oPlayer))
 		image_index = 0;
 	}
 
-	if (inputDirection > 90 && inputDirection < 270)
-	{
-		image_xscale = -1;
-	}
-	else
-	{
-		image_xscale = 1;	
-	}
+	if (inputDirection > 90 && inputDirection < 270) image_xscale = -1;
+	else image_xscale = 1;
+	
+	//if (instance_exists(oWeapon) && !heartAttack)
+	//{
+		//oWeapon.visible = false;
+	//}
 	
 	if (heartAttack)
 	{
 		if (heartAttackDelaySet == false)
 		{
 			heartAttackDelaySet = true;
-			visible = true;
-			oWeapon.visible = true;
-			heartAttackDelay = 200;
+			//visible = true;
+			//oWeapon.visible = true;
+			heartAttackDelay = 400;
+			fireBlastCountdown = 100;
+			speedWalk = 0;
+			instance_create_layer(other.x, other.y, "HeartPackAttack", oHeartParticle);
 		}
 		else
 		{
-			heartAttackDelay -= 1;
+			fireBlastCountdown--;
+			heartAttackDelay--;
+			if (fireBlastCountdown <= 0)
+			{
+				with (instance_create_layer(x, y-5, "Fire", oFire))
+				{
+					speed = 2;
+					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y);
+					image_angle = direction;
+				}
+				fireBlastCountdown = 100;
+			}
 			if (heartAttackDelay <= 0)
 			{
-				visible = false;
-				oWeapon.visible = false;
+				//visible = false;
+				//oWeapon.visible = false;
 				heartAttack = false;
 				heartAttackDelay = 0;
 				heartAttackDelaySet = false;
+				visibleCondition = false;
+				if (room == Level1) speedWalk = 0.5;
+				instance_destroy(oHeartParticle);
 			}
 		}
 	}
-	else
-	{
-		if (appear > 0)
-		{
-			visible = false;
-			oWeapon.visible = false;
-			appear--
-		}
-		else
-		{
-			visible = true;
-			oWeapon.visible = true;
-			appear = 200;
-			with (instance_create_layer(x, y, "Fire", oFire))
-			{
-				image_speed = 2;
-			}
-		}
-	}
-	
 }
 
 

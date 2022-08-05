@@ -1,4 +1,5 @@
-if (!instance_exists(oHeartPack) && room == Room1 && heartWithMe = true)
+if (!instance_exists(oHeartPack) && heartWithMe = true)
 {
+	if (room == Room1 || room == Level1 || room == Level2)
 	instance_create_layer(x-7, y-16, "Player", oHeartPack)
 }

@@ -1,51 +1,58 @@
 // Step Event
-
 // Check that surface exists
 if (surface_exists(surface))
 {
-	// Switch surface to draw to
-	surface_set_target(surface);
 
-	// Select the colour to draw
-	draw_set_color(c_black);
-
-	// Set the alpha value to draw at
-	draw_set_alpha(0.9);
-
-	// Fill View with black
-	draw_rectangle(0,0, 352, 512, 0);
-
-	// Reset the alpha
-	draw_set_alpha(1);
+	if (room == Room1) lightingRadius = 80;
 	
-	// Draw Circle in Step Event
-
-	// Set blend mode to subtract
-	gpu_set_blendmode(bm_subtract);
-
-	// Set colour to draw
-	draw_set_color(c_white);
-
-	// Check if Player object exists
-	if (instance_exists(oPlayer))
+	if (lightingRadius != 0)
 	{
-		with (oPlayer)
+		// Switch surface to draw to
+		surface_set_target(surface);
+
+		// Select the colour to draw
+		draw_set_color(c_black);
+
+		// Set the alpha value to draw at
+		draw_set_alpha(0.9);
+
+		// Fill View with black
+		draw_rectangle(0,0, 352, 512, 0);
+
+		// Reset the alpha
+		draw_set_alpha(1);
+	
+		// Draw Circle in Step Event
+
+		// Set blend mode to subtract
+		gpu_set_blendmode(bm_subtract);
+
+		// Set colour to draw
+		draw_set_color(c_white);
+		// Check if Player object exists
+		if (instance_exists(oPlayer))
 		{
-			// Draw the light circle
-			draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), 35 + random_range(-1, 1), false);
+			with (oPlayer)
+			{
+				// Draw the light circle
+				draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), oLighting.lightingRadius + random_range(-1, 1), false);
+			}
 		}
-	}
-	if (oEnemy.visible == true)
-	{
-		with (oEnemy)
+		if (oEnemy.visible == true)
 		{
-			// Draw the light circle
-			draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), 35 + random_range(-1, 1), false);
+			with (oEnemy)
+			{
+				// Draw the light circle
+				draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), 35 + random_range(-1, 1), false);
+			}
 		}
+		
+		gpu_set_blendmode(bm_normal);
+		draw_set_alpha(1);
+		surface_reset_target();
 	}
-	gpu_set_blendmode(bm_normal);
-	draw_set_alpha(1);
-	surface_reset_target();
+	
+
 }
 else
 {

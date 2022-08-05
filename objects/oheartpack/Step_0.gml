@@ -21,7 +21,10 @@ if (instance_exists(oPlayer))
 
 	if (place_meeting(x, y, oEnemy) && oPlayer.heartWithMe == false)
 	{
-		oEnemy.heartAttack = true;
+		with(instance_place(x, y, oEnemy))
+		{
+			heartAttack = true
+		}
 		direction = point_direction(x, y, oPlayer.x, oPlayer.y);
 		speed = 5;
 	}

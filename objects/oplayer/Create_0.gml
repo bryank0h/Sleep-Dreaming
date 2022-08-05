@@ -6,7 +6,7 @@ if (room == Home)
 }
 else
 {
-	speedWalk = 1.4;
+	speedWalk = 2;
 }
 image_speed = 0;
 hSpeed = 0;

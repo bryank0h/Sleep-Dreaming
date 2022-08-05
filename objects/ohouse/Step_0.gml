@@ -1,6 +1,6 @@
 if (place_meeting(x,y, oPlayer))
 {
-	oEnterHome.playerCanEnter = 1;
+	oNextLevel.playerCanEnter = 1;
 }
 
 

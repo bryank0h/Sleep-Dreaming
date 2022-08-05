@@ -6,8 +6,6 @@ if (dead == 0)
 	keyRight = keyboard_check(ord("D")) || keyboard_check(vk_right);
 	keyUp = keyboard_check(ord("W")) || keyboard_check(vk_up);
 	keyDown = keyboard_check(ord("S")) || keyboard_check(vk_down);
-	keyAttack  = keyboard_check(vk_space);
-	keyItem = keyboard_check_pressed(ord("I"));
 
 	// Movement Calculate
 	inputDirection = point_direction(0, 0, keyRight - keyLeft, keyDown - keyUp);
@@ -78,6 +76,7 @@ if (dead == 0)
 		{
 			HP -= 2;
 			flash = 15;
+			oEnemy.heartAttack = true;
 		}
 			
 		vulnerable = 5;

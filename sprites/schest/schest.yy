@@ -89,8 +89,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Boxes",
+    "path": "folders/Sprites/Boxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "sChest",
