@@ -19,7 +19,7 @@ if (instance_exists(oPlayer))
 		}
 	}
 
-	if (place_meeting(x, y, oEnemy) && oPlayer.heartWithMe == false)
+	if (place_meeting(x, y, oEnemy) && oPlayer.heartWithMe == false && touched == 0)
 	{
 		with(instance_place(x, y, oEnemy))
 		{

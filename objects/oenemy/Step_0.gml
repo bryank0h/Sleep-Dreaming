@@ -44,9 +44,9 @@ if (instance_exists(oPlayer))
 			heartAttackDelay--;
 			if (fireBlastCountdown <= 0)
 			{
-				with (instance_create_layer(x, y-5, "Fire", oFire))
+				with (instance_create_layer(x, y, "Fire", oFire))
 				{
-					speed = 2;
+					speed = 3;
 					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y);
 					image_angle = direction;
 				}
@@ -60,7 +60,7 @@ if (instance_exists(oPlayer))
 				heartAttackDelay = 0;
 				heartAttackDelaySet = false;
 				visibleCondition = false;
-				if (room == Level1) speedWalk = 0.5;
+				if (room == Level1 || room == Level2 || room == Level3) speedWalk = 0.5;
 				instance_destroy(oHeartParticle);
 			}
 		}

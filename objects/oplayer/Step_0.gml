@@ -39,8 +39,12 @@ if (dead == 0)
 
 
 	// Collide into enemy
-	if (place_meeting(x+0.6, y+0.6, oEnemy))
+	if (place_meeting(x+0.6, y+0.6, oEnemy) || (place_meeting(x, y, oFire)))
 	{
+		if(place_meeting(x, y, oFire))
+		{
+			instance_destroy(oFire);
+		}
 		directionOfHit = point_direction(oEnemy.x, oEnemy.y, x, y)
 		if (directionOfHit > 90 && directionOfHit < 270) hitMagnitude = 70 else hitMagnitude = 70;
 	
@@ -76,7 +80,7 @@ if (dead == 0)
 		{
 			HP -= 2;
 			flash = 15;
-			oEnemy.heartAttack = true;
+			HPDeducted = true;
 		}
 			
 		vulnerable = 5;
@@ -87,6 +91,7 @@ if (dead == 0)
 		instance_deactivate_object(oPlayer);
 		instance_create_layer(x,y,"Player", oDead);
 		instance_destroy(oPlayer);
+		screenshake(30, 5, 0.2);
 		dead = 1;
 	}
 }

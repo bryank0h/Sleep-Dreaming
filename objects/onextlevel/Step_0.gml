@@ -8,6 +8,8 @@ if (instance_exists(oPlayer))
 				room_goto(Level1);
 			else if (room == Level1)
 				room_goto(Level2);
+			else if (room == Level2)
+				room_goto(Level3);
 		}
 	}
 }

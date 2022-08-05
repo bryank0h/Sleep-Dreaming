@@ -20,5 +20,6 @@ warped = 0;
 flash = 0;
 darken = 0;
 vulnerable = 0;
+HPDeducted = false;
 dead = 0;
 heartWithMe = true;
