@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sColTransparent",
-    "path": "sprites/sColTransparent/sColTransparent.yy",
+    "name": "sCol",
+    "path": "sprites/sCol/sCol.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,

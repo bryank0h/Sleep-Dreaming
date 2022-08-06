@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Properties",
-    "path": "folders/Objects/Game Properties.yy",
+    "name": "TextProperties",
+    "path": "folders/Objects/Game Properties/Text/TextProperties.yy",
   },
   "resourceVersion": "1.0",
   "name": "oText",

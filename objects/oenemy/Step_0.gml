@@ -1,4 +1,4 @@
-if (instance_exists(oPlayer))
+if (instance_exists(oPlayer) && !global.gamePaused)
 {
 	// Movement Calculate
 	inputDirection = point_direction(x, y, oPlayer.x, oPlayer.y);

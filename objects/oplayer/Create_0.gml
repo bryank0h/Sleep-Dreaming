@@ -1,8 +1,8 @@
 collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
 
-if (room == Home)
+if (room == Home || room == House)
 {
-	speedWalk = 1;
+	speedWalk = 2;
 }
 else
 {
@@ -23,13 +23,7 @@ healthbar_height = 12;
 
 display_set_gui_size(room_width, room_height);
 healthbar_x = 2;
-if (room == Home) healthbar_y = ystart - 142;
-else if (room == Level3) 
-{
-	healthbar_y = ystart - 120;
-}
-else healthbar_y = ystart - 153;
-
+healthbar_y = room_height - 178;
 
 currentX = 0;
 currentY = 0;

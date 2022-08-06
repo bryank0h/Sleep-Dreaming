@@ -1,7 +1,10 @@
-if (HPDeducted)
+if (!global.gamePaused)
 {
-	screenshake(15, 0.5, 0.7);
-	HPDeducted = false;
+	if (HPDeducted)
+	{
+		screenshake(15, 0.5, 0.7);
+		HPDeducted = false;
+	}
 }
 
 

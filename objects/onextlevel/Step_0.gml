@@ -1,15 +1,17 @@
 if (instance_exists(oPlayer))
 {
-	if (playerCanEnter == 1)
+	if (place_meeting(x,y,oPlayer))
 	{
-		if (keyboard_check_pressed(ord("E")))
-		{	
-			if (room == Home)
-				room_goto(Level1);
-			else if (room == Level1)
-				room_goto(Level2);
-			else if (room == Level2)
-				room_goto(Level3);
+		if (playerCanEnter == 1)
+		{
+			if (keyboard_check_pressed(ord("E")))
+			{	
+				RoomTransition(TRANS_TYPE.SLIDE);		
+			}
+		}
+		if (instance_exists(oTransition) && playerCanEnter == 0)
+		{
+			if (oTransition.percent >= 1) RoomTransition(TRANS_TYPE.SLIDE);
 		}
 	}
 }

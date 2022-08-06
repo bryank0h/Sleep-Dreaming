@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "HealthBar",
+    "path": "folders/Sprites/HealthBar.yy",
   },
   "resourceVersion": "1.0",
   "name": "sHealthbar_border",

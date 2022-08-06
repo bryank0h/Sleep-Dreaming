@@ -1,4 +1,4 @@
-if (dead == 0)
+if (dead == 0 && !global.gamePaused)
 {
 	if (vulnerable > 0) vulnerable--;
 	// Keyboard input
@@ -78,6 +78,21 @@ if (dead == 0)
 
 		if (vulnerable == 0) 
 		{
+			audio_play_sound(Bump,900,false);
+			HP--;
+			global.playerHP = HP;
+			flash = 15;
+			HPDeducted = true;
+		}
+			
+		vulnerable = 5;
+	}
+	
+	if (place_meeting(x,y,oSpikeUp) || place_meeting(x,y,oSpikeDown) || place_meeting(x,y,oSpikeLeft) || place_meeting(x,y,oSpikeRight))
+	{
+		if (vulnerable == 0) 
+		{
+			audio_play_sound(Bump,900,false);
 			HP--;
 			global.playerHP = HP;
 			flash = 15;
