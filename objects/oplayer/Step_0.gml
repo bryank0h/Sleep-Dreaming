@@ -1,4 +1,4 @@
-if (dead == 0 && !global.gamePaused)
+if (dead == 0 && !global.gamePaused && canMove)
 {
 	if (vulnerable > 0) vulnerable--;
 	// Keyboard input
@@ -20,7 +20,7 @@ if (dead == 0 && !global.gamePaused)
 	if (hSpeed != 0 || vSpeed != 0) 
 	{
 		image_speed = 1;
-		if (room == Home) image_speed = 0.3;
+		if (room == Home || room == House || room == StartofDream || room == AfterLevel3) image_speed = 0.3;
 	}
 	else
 	{

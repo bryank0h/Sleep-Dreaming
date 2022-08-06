@@ -15,3 +15,11 @@ if (instance_exists(oPlayer))
 		}
 	}
 }
+
+if (instance_exists(oPlayerSleeping))
+{
+	if (playerCanEnter == 1)
+	{
+		RoomTransition(TRANS_TYPE.SLIDE);
+	}
+}

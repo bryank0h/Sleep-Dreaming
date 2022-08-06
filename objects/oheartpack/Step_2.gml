@@ -1,4 +1,4 @@
-if (instance_exists(oPlayer) && !global.gamePaused)
+if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && room != AfterLevel3)
 {
 	if (instance_exists(oPlayer) && (place_meeting(x,y,oPlayer) || touched == 1) && leavingTime <= 0)
 	{
@@ -19,4 +19,14 @@ if (instance_exists(oPlayer) && !global.gamePaused)
 	}
 	
 	leavingTime--;
+}
+
+if (room == StartofDream || room == AfterLevel3)
+{
+	if (place_meeting(x,y,oPlayer))
+	{
+		x = oPlayer.x - 7;
+		y = oPlayer.y - 16;
+		touched = 1;
+	}
 }

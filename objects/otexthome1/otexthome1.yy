@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Home",
-    "path": "folders/Objects/Game Properties/Text/Home.yy",
+    "name": "1. Home",
+    "path": "folders/Objects/Game Properties/Text/1. Home.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTextHome1",

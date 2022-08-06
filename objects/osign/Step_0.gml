@@ -7,4 +7,3 @@ if (place_meeting(x,y,oPlayer)) && (!instance_exists(oText) && (TextCreated == f
 	}
 	TextCreated = true;
 }
-

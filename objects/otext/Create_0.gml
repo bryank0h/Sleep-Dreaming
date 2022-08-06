@@ -5,6 +5,5 @@ y2 = RESOLUTION_H-2;
 
 x1Target = 0;
 x2Target = RESOLUTION_W;
-
 lerpProgress = 0;
 textProgress = 0;
