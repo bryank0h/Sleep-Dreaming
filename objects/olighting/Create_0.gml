@@ -1,6 +1,6 @@
 // Create Event
 // Create the surface for lighting
-surface = surface_create(RESOLUTION_W, RESOLUTION_H);
+surface = surface_create(RESOLUTION_W, RESOLUTION_H +25);
 
 // Set the surface target to the new surface instead of the application surface
 surface_set_target(surface);

@@ -2,7 +2,7 @@ if (room == AfterLevel3)
 {
 	if (soundPlayed == false)
 	{
-		audio_sound_gain(sound, 0, 5000);
+		audio_sound_gain(sound, 0, 10000);
 		if (audio_sound_get_gain(sound) == 0)
 		{
 			audio_stop_all();

@@ -4,6 +4,7 @@ if (surface_exists(surface))
 {
 
 	if (room == Room1) lightingRadius = 80;
+	else if (room == Level4) lightingRadius = 40;
 	
 	if (lightingRadius != 0)
 	{
@@ -17,7 +18,7 @@ if (surface_exists(surface))
 		draw_set_alpha(0.9);
 
 		// Fill View with black
-		draw_rectangle(0,0, 352, 512, 0);
+		draw_rectangle(0, 0, 352, 600, 0);
 
 		// Reset the alpha
 		draw_set_alpha(1);
@@ -35,7 +36,7 @@ if (surface_exists(surface))
 			with (oPlayer)
 			{
 				// Draw the light circle
-				draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), oLighting.lightingRadius + random_range(-1, 1), false);
+				draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), other.lightingRadius + random_range(-1, 1), false);
 			}
 		}
 		if (oEnemy.visible == true)

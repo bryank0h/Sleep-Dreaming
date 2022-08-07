@@ -42,9 +42,11 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping)
 				{
 					if (oPlayer.x > 260)
 					{
+						audio_stop_all();
 						oEnemy.visible = false;
 						layer_set_visible("Floor", true);
 						oRightDoor.visible = true;
+						oSound1.soundPlayed = false;
 					}
 				}
 			}

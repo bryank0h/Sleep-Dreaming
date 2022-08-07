@@ -12,6 +12,10 @@ if (room == AfterLevel3)
 {
 	speedWalk = 0;
 }
+if (room == Level4)
+{
+	speedWalk = 0.6;
+}
 
 playerDead = false;
 visibleCondition = false;

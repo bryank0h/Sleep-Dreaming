@@ -21,11 +21,6 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3)
 	if (inputDirection > 90 && inputDirection < 270) image_xscale = -1;
 	else image_xscale = 1;
 	
-	//if (instance_exists(oWeapon) && !heartAttack)
-	//{
-		//oWeapon.visible = false;
-	//}
-	
 	if (heartAttack)
 	{
 		if (heartAttackDelaySet == false)
@@ -46,11 +41,11 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3)
 			{
 				with (instance_create_layer(x, y, "Fire", oFire))
 				{
-					speed = 3;
 					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y);
 					image_angle = direction;
 				}
-				fireBlastCountdown = 100;
+				if (room == Level4) fireBlastCountdown = 75;
+				else fireBlastCountdown = 100;
 			}
 			if (heartAttackDelay <= 0)
 			{
@@ -60,7 +55,8 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3)
 				heartAttackDelay = 0;
 				heartAttackDelaySet = false;
 				visibleCondition = false;
-				if (room == Level1 || room == Level2 || room == Level3) speedWalk = 0.5;
+				if (room == Level1 || room == Level2 || room == Level3 ) speedWalk = 0.5;
+				else if (room == Level4) speedWalk = 0.6;
 				instance_destroy(oHeartParticle);
 			}
 		}
