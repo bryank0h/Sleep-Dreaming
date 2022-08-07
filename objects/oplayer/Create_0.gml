@@ -3,8 +3,8 @@ canMove = true;
 
 if (room == Home || room == House || room == StartofDream)
 {
-	speedWalk = 0.13;
-	//speedWalk = 2;
+	//speedWalk = 0.13;
+	speedWalk = 2;
 }
 else if (room == AfterLevel3)
 {
@@ -21,7 +21,11 @@ if (variable_global_exists("playerHP"))
 {
 	HP = global.playerHP;
 }
-else HP = 5;
+else
+{
+	HP = 5;
+	global.playerHP = HP;
+}
 HP_max = 5;
 
 healthbar_width = 100;

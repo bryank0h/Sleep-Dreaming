@@ -33,6 +33,11 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping)
 				{
 					oNextLevel.playerCanEnter = 1;
 				}
+				else if (room == Level1)
+				{
+					sound = audio_play_sound(Infiltration,1000,true);
+					soundPlayed = true;
+				}
 			}
 		}
 		else

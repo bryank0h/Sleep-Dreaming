@@ -6,7 +6,8 @@ if (instance_exists(oPlayer))
 		{
 			if (keyboard_check_pressed(ord("E")))
 			{	
-				RoomTransition(TRANS_TYPE.SLIDE);		
+				SaveGame();
+				RoomTransition(TRANS_TYPE.SLIDE);
 			}
 		}
 		if (instance_exists(oTransition) && playerCanEnter == 0)

@@ -9,6 +9,6 @@ function NewTextBox(){
 		if (instance_exists(other)) originInstance = other.id; else originInstance = noone;
 		if (argument_count > 1) background = argument[1]; else background = 0;
 	}
-	global.gamePaused = true;
 	global.gamePausedforText = true;
+	global.gamePaused = true;
 }
