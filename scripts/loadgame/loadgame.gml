@@ -1,19 +1,19 @@
 function LoadGame(_slot){
+	audio_stop_all();
 	global.gameSaveSlot = _slot;
 	var _file = "save" + string(global.gameSaveSlot) + ".sav";
 	if (file_exists(_file))
 	{
 		var _json = LoadJSONFromFile(_file);
-		room = _json[? "room"];
 		global.playerHP = _json[? "playerHealth"];
-		oPlayer.x = _json[? "playerX"];
-		oPlayer.y = _json[? "playerY"]
-		if (room != Home)
-		{
-			if (!instance_exists(oSound1)) instance_create_layer(7, -17, "Audio", oSound1);
-			oSound1.sound = _json[? "audio"];
-			oSound1.soundPlayed = _json[? "audioPlayed"];
-		}
+		if (!instance_exists(oSound1)) instance_create_layer(7, -17, "Audio", oSound1);
+		global.sound = _json[? "audio"];
+		global.soundPlayed = _json[? "audioPlayed"];
+		
+		//RoomTransition(TRANS_TYPE.SLIDE);
+		global.room = _json[? "room"];
+		ds_map_destroy(_json);
+		
 		return true;
 	}
 	else
@@ -28,6 +28,6 @@ function LoadJSONFromFile(_filename)
 	var _buffer = buffer_load(_filename);
 	var _string = buffer_read(_buffer, buffer_string);
 	buffer_delete(_buffer);
-	var _json = josn_decode(_string);
+	var _json = json_decode(_string);
 	return _json;
 }

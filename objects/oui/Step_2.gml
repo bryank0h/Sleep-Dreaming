@@ -3,6 +3,7 @@ if (global.gamePaused && !global.gamePausedforText)
 	keyUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 	keyDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 	pauseOptionSelected += (keyDown - keyUp);
+	if (pauseOptionSelected != 1) savedGame = false;
 	if (pauseOptionSelected >= array_length(pauseOption)) pauseOptionSelected = 0;
 	if (pauseOptionSelected < 0) pauseOptionSelected = array_length(pauseOption) - 1;
 	
@@ -18,11 +19,10 @@ if (global.gamePaused && !global.gamePausedforText)
 			case 1:
 			{
 				SaveGame();
-				game_restart();
+				savedGame = true;
 			} break;
 			case 2:
 			{
-				SaveGame();
 				game_end();
 			} break;
 		}

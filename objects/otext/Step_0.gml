@@ -38,6 +38,15 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping)
 					sound = audio_play_sound(Infiltration,1000,true);
 					soundPlayed = true;
 				}
+				else if (room == AfterLevel3)
+				{
+					if (oPlayer.x > 260)
+					{
+						oEnemy.visible = false;
+						layer_set_visible("Floor", true);
+						oRightDoor.visible = true;
+					}
+				}
 			}
 		}
 		else

@@ -6,9 +6,7 @@ function SaveGame(){
 	
 	_map[? "room"] = room;
 	_map[? "playerHealth"] = global.playerHP;
-	_map[? "playerX"] = oPlayer.x;
-	_map[? "playerY"] = oPlayer.y;
-	_map[? "audio"] = oSound1.sound;
+	_map[? "audio"] = audio_get_name(oSound1.sound);
 	_map[? "audioPlayed"] = oSound1.soundPlayed;
 	
 	var _string = json_encode(_map);

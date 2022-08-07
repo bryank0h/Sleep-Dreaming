@@ -1,5 +1,6 @@
 if (dead == 0 && !global.gamePaused && canMove)
 {
+	speedWalk = SetPlayerSpeed();
 	if (vulnerable > 0) vulnerable--;
 	// Keyboard input
 	keyLeft = keyboard_check(ord("A")) || keyboard_check(vk_left);
@@ -38,54 +39,57 @@ if (dead == 0 && !global.gamePaused && canMove)
 	}
 
 
-	// Collide into enemy
-	if (place_meeting(x+0.6, y+0.6, oEnemy) || (place_meeting(x, y, oFire)))
+	if (room != AfterLevel3)
 	{
-		if(place_meeting(x, y, oFire))
+		// Collide into enemy
+		if (place_meeting(x+0.6, y+0.6, oEnemy) || (place_meeting(x, y, oFire)))
 		{
-			instance_destroy(oFire);
-		}
-		directionOfHit = point_direction(oEnemy.x, oEnemy.y, x, y)
-		if (directionOfHit > 90 && directionOfHit < 270) hitMagnitude = 70 else hitMagnitude = 70;
-	
-		magnitudeCount = 0;
-		while (magnitudeCount != hitMagnitude)
-		{
-			tilemapExist = tilemap_get_at_pixel(collisionMap, x + magnitudeCount, y + magnitudeCount);
-			if (tilemapExist)
-			{		
-				break;
-			}
-			else 
+			if(place_meeting(x, y, oFire))
 			{
-				magnitudeCount++;
+				instance_destroy(oFire);
 			}
-		}	
+			directionOfHit = point_direction(oEnemy.x, oEnemy.y, x, y)
+			if (directionOfHit > 90 && directionOfHit < 270) hitMagnitude = 70 else hitMagnitude = 70;
+	
+			magnitudeCount = 0;
+			while (magnitudeCount != hitMagnitude)
+			{
+				tilemapExist = tilemap_get_at_pixel(collisionMap, x + magnitudeCount, y + magnitudeCount);
+				if (tilemapExist)
+				{		
+					break;
+				}
+				else 
+				{
+					magnitudeCount++;
+				}
+			}	
 
-		hSpeed = lengthdir_x(magnitudeCount, directionOfHit);
-		vSpeed = lengthdir_y(magnitudeCount, directionOfHit);
+			hSpeed = lengthdir_x(magnitudeCount, directionOfHit);
+			vSpeed = lengthdir_y(magnitudeCount, directionOfHit);
 	
-		currentX = x;
-		currentY = y;
+			currentX = x;
+			currentY = y;
 	
-		PlayerCollision()
+			PlayerCollision()
 	
-		if (x < 17 || y < 17 || x > 300 || y > 158)
-		{
-			x = currentX;
-			y = currentY;		
-		}
+			if (x < 17 || y < 17 || x > 300 || y > 158)
+			{
+				x = currentX;
+				y = currentY;		
+			}
 
-		if (vulnerable == 0) 
-		{
-			audio_play_sound(Bump,900,false);
-			HP--;
-			global.playerHP = HP;
-			flash = 15;
-			HPDeducted = true;
-		}
+			if (vulnerable == 0) 
+			{
+				audio_play_sound(Bump,900,false);
+				HP--;
+				global.playerHP = HP;
+				flash = 15;
+				HPDeducted = true;
+			}
 			
-		vulnerable = 5;
+			vulnerable = 5;
+		}
 	}
 	
 	if (place_meeting(x,y,oSpikeUp) || place_meeting(x,y,oSpikeDown) || place_meeting(x,y,oSpikeLeft) || place_meeting(x,y,oSpikeRight))

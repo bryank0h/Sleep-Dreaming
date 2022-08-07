@@ -2,9 +2,12 @@ if (TextCreated == false)
 {
 	if (place_meeting(x,y,oPlayer))
 	{
-		global.textSpeed = .04;
+		layer_set_visible("Floor", false);
+		oEnemy.visible = true;
+		audio_stop_all();
+		global.textSpeed = .02;
 		audio_play_sound(whisper,900,false);
-		NewTextBox("Are you enjoying yourself?");
+		NewTextBox("Are you done......?");
 		TextCreated = true;
 	}
 }

@@ -1,4 +1,4 @@
-if (instance_exists(oPlayer) && !global.gamePaused)
+if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3)
 {
 	// Movement Calculate
 	inputDirection = point_direction(x, y, oPlayer.x, oPlayer.y);

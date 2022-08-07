@@ -6,6 +6,7 @@ function RoomTransition(){
 		with (instance_create_depth(0,0,-9999,oTransition))
 		{
 			type = argument[0];
+			roomToGoTo = argument[1];
 		}
 	}
 }

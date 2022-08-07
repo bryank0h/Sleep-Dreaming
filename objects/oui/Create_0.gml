@@ -1,5 +1,6 @@
-pauseOption = ["Continue", "Save & Quit", "Save & Quit to Desktop"];
+pauseOption = ["Continue", "Save Game", "Leave Game"];
 pauseOptionSelected = 0;
+savedGame = false;
 
 
 

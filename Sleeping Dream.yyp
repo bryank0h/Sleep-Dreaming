@@ -36,6 +36,7 @@
     {"id":{"name":"sWallCenter3","path":"sprites/sWallCenter3/sWallCenter3.yy",},"order":2,},
     {"id":{"name":"oTextAL3_1","path":"objects/oTextAL3_1/oTextAL3_1.yy",},"order":0,},
     {"id":{"name":"oSpikeDown","path":"objects/oSpikeDown/oSpikeDown.yy",},"order":1,},
+    {"id":{"name":"SetPlayerSpeed","path":"scripts/SetPlayerSpeed/SetPlayerSpeed.yy",},"order":9,},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},"order":5,},
     {"id":{"name":"oTextHouse1","path":"objects/oTextHouse1/oTextHouse1.yy",},"order":0,},
     {"id":{"name":"sBed","path":"sprites/sBed/sBed.yy",},"order":33,},

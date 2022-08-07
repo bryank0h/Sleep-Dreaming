@@ -12,3 +12,4 @@ height = RESOLUTION_H;
 heightHalf = height * 0.5;
 percent = 0;
 leading = OUT;
+roomToGoTo = noone;

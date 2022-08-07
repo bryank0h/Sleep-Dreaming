@@ -1,19 +1,7 @@
 collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
 canMove = true;
 
-if (room == Home || room == House || room == StartofDream)
-{
-	//speedWalk = 0.13;
-	speedWalk = 2;
-}
-else if (room == AfterLevel3)
-{
-	speedWalk = 0.17;
-}
-else
-{
-	speedWalk = 1.5;
-}
+speedWalk = SetPlayerSpeed();
 image_speed = 0;
 hSpeed = 0;
 vSpeed = 0;
