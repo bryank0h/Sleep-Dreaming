@@ -8,7 +8,7 @@ if (room == Level1)
 {
 	speedWalk = 0.5;
 }
-if (room == AfterLevel3)
+if (room == AfterLevel3 || room == LoadAtAfterLevel3)
 {
 	speedWalk = 0;
 }

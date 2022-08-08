@@ -4,7 +4,7 @@ textProgress += global.textSpeed;
 x1 = lerp(x1, x1Target, lerpProgress);
 x2 = lerp(x2, x2Target, lerpProgress);
 
-if (keyboard_check_pressed(ord("E")) || room == HouseSleeping)
+if (keyboard_check_pressed(ord("E")) || room == HouseSleeping || room == LoadAtAfterLevel3)
 {
 	continueCondition = true;
 	if (room == StartofDream)
@@ -49,11 +49,16 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping)
 						oSound1.soundPlayed = false;
 					}
 				}
+				else if (room == LoadAtAfterLevel3)
+				{
+					audio_play_sound(Sting, 1000, false);
+					oNextLevel.playerCanEnter = 1;
+				}
 			}
 		}
 		else
 		{
-			if (textProgress > 2 && room != HouseSleeping && room != AfterLevel3)
+			if (textProgress > 2 && room != HouseSleeping && room != AfterLevel3 && room != LoadAtAfterLevel3)
 			{
 				textProgress = _messageLength;
 			}

@@ -1,4 +1,4 @@
-if (TextCreated == false)
+if (TextCreated == false && !global.readLevel1)
 {
 	if (place_meeting(x,y,oPlayer))
 	{
@@ -7,6 +7,7 @@ if (TextCreated == false)
 		NewTextBox("...");
 		NewTextBox("(Justin's Heart wavers)")
 		TextCreated = true;
+		global.readLevel1 = true;
 	}
 }
 

@@ -6,7 +6,16 @@ function SaveGame(){
 	
 	_map[? "room"] = room;
 	_map[? "playerHealth"] = global.playerHP;
-	_map[? "audio"] = audio_get_name(oSound1.sound);
+	if (room == AfterLevel3)
+	{
+		_map[? "audio"] = DarkAlley;
+	}
+	else if (room == Level1)
+	{
+		_map[? "audio"] = Infiltration;
+	}
+	else _map[? "audio"] = audio_get_name(oSound1.sound);
+	
 	_map[? "audioPlayed"] = oSound1.soundPlayed;
 	
 	var _string = json_encode(_map);

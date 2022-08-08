@@ -1,5 +1,6 @@
-if (global.gamePaused && !global.gamePausedforText)
+if (global.gamePaused && !global.gamePausedforText && room != rTitle)
 {
+	show_debug_message("PAUSED");
 	keyUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 	keyDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 	pauseOptionSelected += (keyDown - keyUp);
@@ -23,8 +24,12 @@ if (global.gamePaused && !global.gamePausedforText)
 			} break;
 			case 2:
 			{
-				game_end();
+				game_restart();
 			} break;
+			case 3:
+			{
+				game_end();
+			}
 		}
 	}
 }

@@ -1,20 +1,19 @@
 {
-  "name": "sML3",
-  "HTile": false,
-  "VTile": false,
-  "For3D": false,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 319,
   "bbox_top": 23,
   "bbox_bottom": 179,
-  "origin": 0,
-  "bboxMode": 0,
-  "collisionKind": 1,
-  "type": 0,
-  "swfPrecision": 2.525,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
   "width": 320,
   "height": 180,
   "textureGroupId": {
@@ -30,12 +29,6 @@
       ],"parent":{"name":"sML3","path":"sprites/sML3/sML3.yy",},"resourceVersion":"1.0","name":"0ad0fa12-fe36-4cc3-bdc3-0a38cf041a03","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"350f4191-2ff9-43dc-9dc3-f62f8366e5bb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0ad0fa12-fe36-4cc3-bdc3-0a38cf041a03","path":"sprites/sML3/sML3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
-    ],
-    "visibleRange": null,
     "spriteId": {"name":"sML3","path":"sprites/sML3/sML3.yy",},
     "timeUnits": 1,
     "playback": 1,
@@ -46,6 +39,12 @@
     "length": 1.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"350f4191-2ff9-43dc-9dc3-f62f8366e5bb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0ad0fa12-fe36-4cc3-bdc3-0a38cf041a03","path":"sprites/sML3/sML3.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+    ],
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -74,6 +73,7 @@
     "path": "folders/Sprites/Background.yy",
   },
   "resourceVersion": "1.0",
+  "name": "sML3",
   "tags": [],
   "resourceType": "GMSprite",
 }

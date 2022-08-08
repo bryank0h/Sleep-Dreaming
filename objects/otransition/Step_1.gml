@@ -34,10 +34,15 @@ if (leading == OUT)
 		{
 			room_goto(AfterLevel3);
 		}
+		else if (room == LoadAtAfterLevel3)
+		{
+			room_goto(AfterLevel3);
+		}
 		else if (room == AfterLevel3)
 		{
 			room_goto(Level4)
 		}
+		else room_goto(roomToGoTo);
 	}
 }
 else

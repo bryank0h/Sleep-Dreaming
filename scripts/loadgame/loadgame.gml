@@ -11,7 +11,8 @@ function LoadGame(_slot){
 		global.soundPlayed = _json[? "audioPlayed"];
 		
 		//RoomTransition(TRANS_TYPE.SLIDE);
-		global.room = _json[? "room"];
+		if (room_get_name(_json[? "room"]) == "AfterLevel3") global.room = LoadAtAfterLevel3;
+		else global.room = _json[? "room"];
 		ds_map_destroy(_json);
 		
 		return true;
