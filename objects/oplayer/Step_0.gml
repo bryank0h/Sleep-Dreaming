@@ -42,7 +42,7 @@ if (dead == 0 && !global.gamePaused && canMove)
 	if (room != AfterLevel3)
 	{
 		// Collide into enemy
-		if (place_meeting(x+0.6, y+0.6, oEnemy) || (place_meeting(x, y, oFire)))
+		if ((place_meeting(x+0.5, y+0.5, oEnemy) || place_meeting(x, y, oEnemy) ||(place_meeting(x, y, oFire))) && !instance_exists(oSoulReflector))
 		{
 			if(place_meeting(x, y, oFire))
 			{

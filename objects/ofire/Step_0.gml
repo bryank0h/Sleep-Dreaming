@@ -2,7 +2,13 @@ if (!global.gamePaused)
 {
 	if(instance_exists(oPlayer)) 
 	{
-		if (timeAlive > 280) direction = point_direction(x,y, oPlayer.x, oPlayer.y);
+		if (timeAlive > 285) direction = point_direction(x,y, oPlayer.x, oPlayer.y);
+	}
+	
+	if (place_meeting(x,y,oSoulReflector) && !gotReflected)
+	{
+		direction += random_range(-1,1) * 70;
+		gotReflected = true;
 	}
 
 	if (instance_exists(oBox1))

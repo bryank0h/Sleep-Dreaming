@@ -21,9 +21,12 @@
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Enemy","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[
-            {"propertyId":{"name":"signText","path":"objects/oSign2/oSign2.yy",},"objectId":{"name":"oSign2","path":"objects/oSign2/oSign2.yy",},"value":"\"Press P\\nto shoot\\nHeartPack!\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"signText","path":"objects/oSign2/oSign2.yy",},"objectId":{"name":"oSign2","path":"objects/oSign2/oSign2.yy",},"value":"\"Press P\\nto shoot\\nHeart Pack!\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oSign2","path":"objects/oSign2/oSign2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":193.0,"y":124.0,"resourceVersion":"1.0","name":"inst_76D6AEC3","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oTextLevel1_1","path":"objects/oTextLevel1_1/oTextLevel1_1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":161.0,"y":132.0,"resourceVersion":"1.0","name":"inst_1A4178FB","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"signText","path":"objects/oSign2/oSign2.yy",},"objectId":{"name":"oSign2","path":"objects/oSign2/oSign2.yy",},"value":"\"Press O\\nto use\\nSoul\\nReflector!\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oSign2","path":"objects/oSign2/oSign2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":127.0,"y":124.0,"resourceVersion":"1.0","name":"inst_18231511","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Text","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oDoorNextRoom","path":"objects/oDoorNextRoom/oDoorNextRoom.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":18.0,"resourceVersion":"1.0","name":"inst_16C965E1_1","tags":[],"resourceType":"GMRInstance",},
@@ -410,6 +413,7 @@
     {"name":"inst_3E025684","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_76D6AEC3","path":"rooms/Level1/Level1.yy",},
     {"name":"inst_1A4178FB","path":"rooms/Level1/Level1.yy",},
+    {"name":"inst_18231511","path":"rooms/Level1/Level1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

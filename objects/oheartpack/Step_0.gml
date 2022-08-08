@@ -18,6 +18,22 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 			oHeartPack.direction = point_direction(oPlayer.x, oPlayer.y, oEnemy.x, oEnemy.y) + random_range(-2,2);
 		}
 	}
+	
+	if (oPlayer.heartWithMe && keyboard_check(ord("O")))
+	{
+		if (!instance_exists(oSoulReflector))
+		{
+			instance_create_layer(oPlayer.x, oPlayer.y-10, "Player", oSoulReflector);
+		}
+	}
+	else
+	{
+		if (instance_exists(oSoulReflector))
+		{
+			instance_destroy(oSoulReflector)
+			oPlayer.canMove = true;
+		}
+	}
 
 	if (place_meeting(x, y, oEnemy) && oPlayer.heartWithMe == false && touched == 0)
 	{
@@ -25,7 +41,7 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 		{
 			heartAttack = true
 		}
-		direction = point_direction(x, y, oPlayer.x, oPlayer.y);
+		direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
 		speed = 5;
 	}
 }
@@ -34,7 +50,7 @@ if (room == StartofDream)
 {
 	if (touched = 0)
 	{
-		direction = point_direction(x, y, oPlayer.x, oPlayer.y);
+		direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
 		speed = 1;
 	}
 }

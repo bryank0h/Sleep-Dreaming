@@ -14,7 +14,7 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 	}
 	else if (leavingTime <= 0)
 	{
-		direction = point_direction(x, y, oPlayer.x, oPlayer.y);
+		direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
 		speed = 5;	
 	}
 	

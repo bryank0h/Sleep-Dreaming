@@ -39,9 +39,9 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 			heartAttackDelay--;
 			if (fireBlastCountdown <= 0)
 			{
-				with (instance_create_layer(x, y, "Fire", oFire))
+				with (instance_create_layer(x, y-7, "Fire", oFire))
 				{
-					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y);
+					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y-3);
 					image_angle = direction;
 				}
 				if (room == Level4) fireBlastCountdown = 75;
