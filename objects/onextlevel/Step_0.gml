@@ -4,7 +4,7 @@ if (instance_exists(oPlayer))
 	{
 		if (playerCanEnter == 1)
 		{
-			if (keyboard_check_pressed(ord("E")))
+			if (keyboard_check_pressed(ord("E")) && !global.gamePaused)
 			{	
 				RoomTransition(TRANS_TYPE.SLIDE);
 			}

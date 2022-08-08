@@ -58,6 +58,10 @@ if (leading == OUT)
 		{
 			room_goto(AfterLevel7);
 		}
+		else if (room == AfterLevel7)
+		{
+			room_goto(GoingToBoss);
+		}
 		else if (is_numeric(roomToGoTo)) room_goto(roomToGoTo);
 		else
 		{

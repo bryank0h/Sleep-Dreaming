@@ -10,6 +10,10 @@ function SetPlayerSpeed(){
 	{
 		return 0.17;
 	}
+	else if (room == GoingToBoss)
+	{
+		return 0.25;
+	}
 	else
 	{
 		return 1.5;

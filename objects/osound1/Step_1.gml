@@ -60,6 +60,12 @@ if (global.gameLoaded && room != LoadAtAfterLevel3 && room != rTitle)
 		soundPlayed = true;
 		global.gameLoaded = false;
 	}
+	else if (room == GoingToBoss)
+	{
+		sound = audio_play_sound(DarkAlley, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
+	}
 	else if (room == Cheating)
 	{
 		window_set_fullscreen(true);
@@ -109,6 +115,12 @@ if (soundPlayed == false)
 		soundPlayed = true;
 	}	
 	else if (room == AfterLevel7)
+	{
+		audio_stop_all();
+		sound = audio_play_sound(DarkAlley,1000,true);
+		soundPlayed = true;
+	}
+	else if (room == GoingToBoss)
 	{
 		audio_stop_all();
 		sound = audio_play_sound(DarkAlley,1000,true);

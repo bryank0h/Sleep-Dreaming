@@ -21,7 +21,7 @@ if (dead == 0 && !global.gamePaused && canMove)
 	if (hSpeed != 0 || vSpeed != 0) 
 	{
 		image_speed = 1;
-		if (room == Home || room == House || room == StartofDream || room == AfterLevel3 || room == AfterLevel7) image_speed = 0.3;
+		if (room == Home || room == House || room == StartofDream || room == AfterLevel3 || room == AfterLevel7 || room == GoingToBoss) image_speed = 0.3;
 	}
 	else
 	{
