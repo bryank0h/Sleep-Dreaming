@@ -13,6 +13,12 @@ if (global.gameLoaded && room != LoadAtAfterLevel3 && room != rTitle)
 		soundPlayed = true;
 		global.gameLoaded = false;
 	}
+	else if (room == Level3)
+	{
+		sound = audio_play_sound(Infiltration, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
+	}
 	else if (room == AfterLevel3)
 	{
 		if (!audio_is_playing(Sting))
@@ -31,6 +37,12 @@ if (global.gameLoaded && room != LoadAtAfterLevel3 && room != rTitle)
 		global.gameLoaded = false;
 	}
 	else if (room == Level5)
+	{
+		sound = audio_play_sound(Phase2, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
+	}
+	else if (room == Level6)
 	{
 		sound = audio_play_sound(Phase2, 1000, true);
 		soundPlayed = true;

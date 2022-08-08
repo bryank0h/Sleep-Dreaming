@@ -46,7 +46,18 @@ if (leading == OUT)
 		{
 			room_goto(Level5);
 		}
-		else room_goto(roomToGoTo);
+		else if (room == Level5)
+		{
+			room_goto(Level6);
+		}
+		else if (is_numeric(roomToGoTo)) room_goto(roomToGoTo);
+		else
+		{
+			audio_stop_all();
+			window_set_fullscreen(true);
+			audio_play_sound(Lol, 1100, true);
+			room_goto(Cheating);
+		}
 	}
 }
 else

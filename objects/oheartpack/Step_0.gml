@@ -15,7 +15,10 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 			oPlayer.heartWithMe = false;
 			leavingTime = 60;
 			oHeartPack.speed = 5;
-			oHeartPack.direction = point_direction(oPlayer.x, oPlayer.y, oEnemy.x, oEnemy.y) + random_range(-2,2);
+			with (instance_nearest(oPlayer.x, oPlayer.y, oEnemy))
+			{
+				oHeartPack.direction = point_direction(oPlayer.x, oPlayer.y, x, y) + random_range(-2,2);
+			}
 		}
 	}
 	

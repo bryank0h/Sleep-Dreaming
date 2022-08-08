@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"Level6","path":"rooms/Level6/Level6.yy",},"order":16,},
     {"id":{"name":"oScreenShake","path":"objects/oScreenShake/oScreenShake.yy",},"order":6,},
     {"id":{"name":"StartofDream","path":"rooms/StartofDream/StartofDream.yy",},"order":9,},
     {"id":{"name":"oTextSAL3_1","path":"objects/oTextSAL3_1/oTextSAL3_1.yy",},"order":0,},
@@ -186,6 +187,7 @@
     {"roomId":{"name":"Level4","path":"rooms/Level4/Level4.yy",},},
     {"roomId":{"name":"LoadAtAfterLevel3","path":"rooms/LoadAtAfterLevel3/LoadAtAfterLevel3.yy",},},
     {"roomId":{"name":"Cheating","path":"rooms/Cheating/Cheating.yy",},},
+    {"roomId":{"name":"Level6","path":"rooms/Level6/Level6.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

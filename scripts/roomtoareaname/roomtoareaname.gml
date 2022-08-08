@@ -13,10 +13,11 @@ function RoomToAreaName(_room){
 		case AfterLevel3: return "I'm losing myself"; break;
 		case Level4: return "The Dream: Level 4"; break;
 		case Level5: return "The Dream: Level 5"; break;
+		case Level6: return "The Dream: Level 6"; break;
 		default: 
 		{
 			global.room = Cheating;
-			return "Such unkn0wn much W0W";
+			return "You shouldn't be here";
 		} break;
 		
 		

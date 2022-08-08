@@ -8,7 +8,7 @@ if (instance_exists(oPlayer))
 			oPlayer.darken = 5;
 			if (room == Level5 && oPlayer.warped == 0)
 			{
-				if (oPlayer.x > 25 && oPlayer.x < 60 && oPlayer.y < 45  && oPlayer.warped == 0)
+				if (oPlayer.x > 25 && oPlayer.x < 60 && oPlayer.y < 45 && oPlayer.warped == 0)
 				{
 					oPlayer.warped = 10;
 					oPlayer.x = 236;
@@ -19,6 +19,21 @@ if (instance_exists(oPlayer))
 					oPlayer.warped = 10;
 					oPlayer.x = 42;
 					oPlayer.y = 24;
+				}
+			}
+			else if (room == Level6 && oPlayer.warped == 0)
+			{
+				if (oPlayer.x < 28 && oPlayer.y > 128 && oPlayer.warped == 0)
+				{
+					oPlayer.warped = 10;
+					oPlayer.x = 295;
+					oPlayer.y = 27;
+				}
+				else if (oPlayer.x > 290 && oPlayer.y < 33 && oPlayer.warped == 0)
+				{
+					oPlayer.warped = 10;
+					oPlayer.x = 22;
+					oPlayer.y = 152;
 				}
 			}
 		

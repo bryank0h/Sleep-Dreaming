@@ -16,6 +16,10 @@ if (room == Level4 || room == Level5)
 {
 	speedWalk = 0.6;
 }
+if (room == Level6)
+{
+	speedWalk = 0.65;
+}
 
 playerDead = false;
 visibleCondition = false;
