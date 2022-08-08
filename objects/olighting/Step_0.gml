@@ -3,8 +3,7 @@
 if (surface_exists(surface))
 {
 
-	if (room == Room1) lightingRadius = 80;
-	else if (room == Level4) lightingRadius = 40;
+	if (room == Level4 || room == Level5) lightingRadius = 40;
 	
 	if (lightingRadius != 0)
 	{

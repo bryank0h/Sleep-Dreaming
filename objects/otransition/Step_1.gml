@@ -40,7 +40,11 @@ if (leading == OUT)
 		}
 		else if (room == AfterLevel3)
 		{
-			room_goto(Level4)
+			room_goto(Level4);
+		}
+		else if (room == Level4)
+		{
+			room_goto(Level5);
 		}
 		else room_goto(roomToGoTo);
 	}

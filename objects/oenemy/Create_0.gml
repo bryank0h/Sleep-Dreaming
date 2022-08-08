@@ -6,13 +6,13 @@ vSpeed = 1;
 speedWalk = 0.7;
 if (room == Level1)
 {
-	speedWalk = 0.5;
+	speedWalk = 0.4;
 }
 if (room == AfterLevel3 || room == LoadAtAfterLevel3)
 {
 	speedWalk = 0;
 }
-if (room == Level4)
+if (room == Level4 || room == Level5)
 {
 	speedWalk = 0.6;
 }

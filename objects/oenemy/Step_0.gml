@@ -56,7 +56,7 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 				heartAttackDelaySet = false;
 				visibleCondition = false;
 				if (room == Level1 || room == Level2 || room == Level3 ) speedWalk = 0.5;
-				else if (room == Level4) speedWalk = 0.6;
+				else if (room == Level4 || room == Level5) speedWalk = 0.6;
 				instance_destroy(oHeartParticle);
 			}
 		}

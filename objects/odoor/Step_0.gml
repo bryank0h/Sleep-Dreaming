@@ -6,7 +6,7 @@ if (instance_exists(oPlayer))
 		{
 			image_speed = 1;
 			oPlayer.darken = 5;
-			if (room = Room1 && oPlayer.warped == 0)
+			if (room == Level5 && oPlayer.warped == 0)
 			{
 				if (oPlayer.x > 25 && oPlayer.x < 60 && oPlayer.y < 45  && oPlayer.warped == 0)
 				{

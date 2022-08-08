@@ -18,10 +18,30 @@ if (global.gameLoaded && room != LoadAtAfterLevel3 && room != rTitle)
 		if (!audio_is_playing(Sting))
 		{
 			window_set_fullscreen(false);
+			oSign.signText = "Why did\nyou save\nyour game?"
 			sound = audio_play_sound(DarkAlley, 1000, true);
 			soundPlayed = true;
 			global.gameLoaded = false;
 		}
+	}
+	else if (room == Level4)
+	{
+		sound = audio_play_sound(Phase2, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
+	}
+	else if (room == Level5)
+	{
+		sound = audio_play_sound(Phase2, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
+	}
+	else if (room == Cheating)
+	{
+		window_set_fullscreen(true);
+		sound = audio_play_sound(Lol, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
 	}
 	else 
 	{
