@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sPlayerSleeping",
-    "path": "sprites/sPlayerSleeping/sPlayerSleeping.yy",
+    "name": "sNull",
+    "path": "sprites/sNull/sNull.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -22,18 +22,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "8. AfterLevel7",
+    "path": "folders/Objects/Game Properties/Text/8. AfterLevel7.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerSleeping",
+  "name": "oTextAL7_4",
   "tags": [],
   "resourceType": "GMObject",
 }

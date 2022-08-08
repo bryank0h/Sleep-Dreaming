@@ -21,7 +21,7 @@ if (dead == 0 && !global.gamePaused && canMove)
 	if (hSpeed != 0 || vSpeed != 0) 
 	{
 		image_speed = 1;
-		if (room == Home || room == House || room == StartofDream || room == AfterLevel3) image_speed = 0.3;
+		if (room == Home || room == House || room == StartofDream || room == AfterLevel3 || room == AfterLevel7) image_speed = 0.3;
 	}
 	else
 	{
@@ -39,7 +39,7 @@ if (dead == 0 && !global.gamePaused && canMove)
 	}
 
 
-	if (room != AfterLevel3)
+	if (room != AfterLevel3 && room != AfterLevel7)
 	{
 		// Collide into enemy
 		if ((place_meeting(x+0.5, y+0.5, oEnemy) || place_meeting(x, y, oEnemy) ||(place_meeting(x, y, oFire))) && !instance_exists(oSoulReflector))

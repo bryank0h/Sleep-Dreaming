@@ -13,6 +13,7 @@ function LoadGame(_slot){
 		//RoomTransition(TRANS_TYPE.SLIDE);
 		if (room_get_name(_json[? "room"]) == "AfterLevel3") global.room = LoadAtAfterLevel3;
 		else if (room_get_name(_json[? "room"]) == "HouseSleeping") global.room = Cheating;
+		else if (room_get_name(_json[? "room"]) == "rTitle") global.room = Cheating;
 		else if (!room_exists(_json[? "room"])) global.room = Cheating;
 		else global.room = _json[? "room"];
 		ds_map_destroy(_json);

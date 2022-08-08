@@ -1,7 +1,10 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sNull",
+    "path": "sprites/sNull/sNull.yy",
+  },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -18,15 +21,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Properties",
-    "path": "folders/Objects/Game Properties.yy",
+    "name": "8. AfterLevel7",
+    "path": "folders/Objects/Game Properties/Text/8. AfterLevel7.yy",
   },
   "resourceVersion": "1.0",
-  "name": "doorWarp",
+  "name": "oTextAL7_3",
   "tags": [],
   "resourceType": "GMObject",
 }

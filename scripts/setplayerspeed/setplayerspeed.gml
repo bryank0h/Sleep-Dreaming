@@ -6,7 +6,7 @@ function SetPlayerSpeed(){
 		//speedWalk = 0.13;
 		return 2;
 	}
-	else if (room == AfterLevel3)
+	else if (room == AfterLevel3 || room == AfterLevel7)
 	{
 		return 0.17;
 	}

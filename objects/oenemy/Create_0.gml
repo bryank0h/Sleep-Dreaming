@@ -1,4 +1,5 @@
 collisionMap = layer_tilemap_get_id(layer_get_id("Col"));
+bossHP = 100;
 
 image_speed = 0;
 hSpeed = 1;
@@ -8,7 +9,7 @@ if (room == Level1)
 {
 	speedWalk = 0.4;
 }
-if (room == AfterLevel3 || room == LoadAtAfterLevel3)
+if (room == AfterLevel3 || room == LoadAtAfterLevel3 || room == AfterLevel7)
 {
 	speedWalk = 0;
 }

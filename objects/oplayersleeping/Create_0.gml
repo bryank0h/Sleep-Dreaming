@@ -9,3 +9,6 @@ key8 = false;
 key9 = false;
 key10 = false;
 
+left = false;
+right = true;
+delay = 0;

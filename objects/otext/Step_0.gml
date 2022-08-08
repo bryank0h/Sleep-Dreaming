@@ -54,6 +54,16 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping || room == LoadAtA
 					audio_play_sound(Sting, 1000, false);
 					oNextLevel.playerCanEnter = 1;
 				}
+				else if (room == AfterLevel7)
+				{
+					if (oPlayer.x > 192 && oPlayer.x < 222)
+					{
+						oEnemy.visible = false;
+						layer_set_visible("Floor", true);
+						oRightDoor.visible = true;
+						oSound1.soundPlayed = false;
+					}			
+				}
 			}
 		}
 		else
