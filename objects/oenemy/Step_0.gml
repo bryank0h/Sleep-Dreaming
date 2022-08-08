@@ -57,7 +57,7 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 				visibleCondition = false;
 				if (room == Level1 || room == Level2 || room == Level3 ) speedWalk = 0.5;
 				else if (room == Level4 || room == Level5) speedWalk = 0.6;
-				else if (room == Level6) speedWalk = 0.65;
+				else if (room == Level6 || room == Level7) speedWalk = 0.65;
 				instance_destroy(oHeartParticle);
 			}
 		}

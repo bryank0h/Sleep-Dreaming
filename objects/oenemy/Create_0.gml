@@ -16,7 +16,7 @@ if (room == Level4 || room == Level5)
 {
 	speedWalk = 0.6;
 }
-if (room == Level6)
+if (room == Level6 || room == Level7)
 {
 	speedWalk = 0.65;
 }

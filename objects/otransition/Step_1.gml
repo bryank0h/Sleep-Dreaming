@@ -50,6 +50,10 @@ if (leading == OUT)
 		{
 			room_goto(Level6);
 		}
+		else if (room == Level6)
+		{
+			room_goto(Level7);
+		}
 		else if (is_numeric(roomToGoTo)) room_goto(roomToGoTo);
 		else
 		{

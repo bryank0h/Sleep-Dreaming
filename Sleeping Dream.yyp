@@ -16,6 +16,7 @@
     {"id":{"name":"sCol","path":"sprites/sCol/sCol.yy",},"order":0,},
     {"id":{"name":"oChest","path":"objects/oChest/oChest.yy",},"order":1,},
     {"id":{"name":"screenshake","path":"scripts/screenshake/screenshake.yy",},"order":3,},
+    {"id":{"name":"Level7","path":"rooms/Level7/Level7.yy",},"order":17,},
     {"id":{"name":"sWallCenter4","path":"sprites/sWallCenter4/sWallCenter4.yy",},"order":3,},
     {"id":{"name":"oTextAL3_4","path":"objects/oTextAL3_4/oTextAL3_4.yy",},"order":3,},
     {"id":{"name":"sSpikeLeft","path":"sprites/sSpikeLeft/sSpikeLeft.yy",},"order":2,},
@@ -188,6 +189,7 @@
     {"roomId":{"name":"LoadAtAfterLevel3","path":"rooms/LoadAtAfterLevel3/LoadAtAfterLevel3.yy",},},
     {"roomId":{"name":"Cheating","path":"rooms/Cheating/Cheating.yy",},},
     {"roomId":{"name":"Level6","path":"rooms/Level6/Level6.yy",},},
+    {"roomId":{"name":"Level7","path":"rooms/Level7/Level7.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

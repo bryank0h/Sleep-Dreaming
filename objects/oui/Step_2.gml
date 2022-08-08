@@ -21,6 +21,7 @@ if (global.gamePaused && !global.gamePausedforText && room != rTitle)
 			{
 				SaveGame();
 				savedGame = true;
+				if (room == AfterLevel3) oSign.signText = "Why did\nyou save\nyour game?";
 			} break;
 			case 2:
 			{
