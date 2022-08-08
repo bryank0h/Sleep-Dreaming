@@ -148,6 +148,7 @@
     {"id":{"name":"Level3","path":"rooms/Level3/Level3.yy",},"order":6,},
     {"id":{"name":"sMarker","path":"sprites/sMarker/sMarker.yy",},"order":29,},
     {"id":{"name":"sColTransparent","path":"sprites/sColTransparent/sColTransparent.yy",},"order":19,},
+    {"id":{"name":"LevelBoss","path":"rooms/LevelBoss/LevelBoss.yy",},"order":20,},
     {"id":{"name":"oHouseInt","path":"objects/oHouseInt/oHouseInt.yy",},"order":27,},
     {"id":{"name":"oPathTile","path":"objects/oPathTile/oPathTile.yy",},"order":7,},
     {"id":{"name":"oClouds","path":"objects/oClouds/oClouds.yy",},"order":6,},
@@ -202,6 +203,7 @@
     {"roomId":{"name":"Level7","path":"rooms/Level7/Level7.yy",},},
     {"roomId":{"name":"AfterLevel7","path":"rooms/AfterLevel7/AfterLevel7.yy",},},
     {"roomId":{"name":"GoingToBoss","path":"rooms/GoingToBoss/GoingToBoss.yy",},},
+    {"roomId":{"name":"LevelBoss","path":"rooms/LevelBoss/LevelBoss.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
