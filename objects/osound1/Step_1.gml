@@ -23,8 +23,7 @@ if (global.gameLoaded && room != LoadAtAfterLevel3 && room != rTitle)
 	{
 		if (!audio_is_playing(Sting))
 		{
-			window_set_fullscreen(false);
-			oSign.signText = "Why did\nyou save\nyour game?"
+			oSign.signText = "I hear\nthe cries of\nJustin";
 			sound = audio_play_sound(DarkAlley, 1000, true);
 			soundPlayed = true;
 			global.gameLoaded = false;
@@ -63,6 +62,13 @@ if (global.gameLoaded && room != LoadAtAfterLevel3 && room != rTitle)
 	else if (room == GoingToBoss)
 	{
 		sound = audio_play_sound(DarkAlley, 1000, true);
+		soundPlayed = true;
+		global.gameLoaded = false;
+	}
+	else if (room == LevelBoss)
+	{
+		global.readBoss = true;
+		sound = audio_play_sound(theEpic2, 1000, true);
 		soundPlayed = true;
 		global.gameLoaded = false;
 	}

@@ -4,7 +4,7 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 	{
 		touched = 1;
 		oPlayer.heartWithMe = true;
-		oEnemy.heartAttackChecked = false;
+		if (instance_exists(oEnemy)) oEnemy.heartAttackChecked = false;
 	}
 	
 	if (oPlayer.heartWithMe == true)
@@ -14,8 +14,16 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 	}
 	else if (leavingTime <= 0)
 	{
-		direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
-		speed = 5;	
+		if (room == LevelBoss)
+		{
+			direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
+			speed = 7.5;	
+		}
+		else
+		{
+			direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
+			speed = 5;	
+		}
 	}
 	
 	leavingTime--;
@@ -31,18 +39,46 @@ if (room == StartofDream || room == AfterLevel3 || room == AfterLevel7 || room =
 	}
 }
 
-if (room == AfterLevel7)
+if (instance_exists(oPlayer))
 {
-	if (oPlayer.x > 282)
+	if (room == AfterLevel7)
 	{
-		global.playerHP += 0.01;
-		oPlayer.HP += 0.01;
+		if (oPlayer.x > 282 && !global.gamePaused)
+		{
+			global.playerHP += 0.01;
+			oPlayer.HP += 0.01;
+			if (global.playerHP >= oPlayer.HP_max)
+			{
+				global.playerHP = oPlayer.HP_max;
+				oPlayer.HP = oPlayer.HP_max;
+			}
+			direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
+			speed = 5;
+		}
+	}
+	
+	if (room == LevelBoss && oPlayer.heartWithMe && !instance_exists(oSoulReflector) && !keyboard_check(ord("O")) && !global.gamePaused)
+	{
 		if (global.playerHP >= oPlayer.HP_max)
 		{
 			global.playerHP = oPlayer.HP_max;
 			oPlayer.HP = oPlayer.HP_max;
 		}
-		direction = point_direction(x, y, oPlayer.x, oPlayer.y-3);
-		speed = 5;
+		else
+		{
+			global.playerHP += 0.005;
+			oPlayer.HP += 0.005;
+		}
 	}
 }
+
+if (room == LevelBoss && instance_exists(oEnemy) && instance_exists(oHeartPack))
+{
+	if (oEnemy.bossHP <= 0)
+	{
+		instance_create_layer(oEnemy.x, oEnemy.y, oDead);
+		instance_destroy(oEnemy);
+		instance_destroy();
+	}
+}
+

@@ -48,7 +48,7 @@ if (dead == 0 && !global.gamePaused && canMove)
 			{
 				instance_destroy(oFire);
 			}
-			directionOfHit = point_direction(oEnemy.x, oEnemy.y, x, y)
+			if(instance_exists(oEnemy)) directionOfHit = point_direction(oEnemy.x, oEnemy.y, x, y);
 			if (directionOfHit > 90 && directionOfHit < 270) hitMagnitude = 70 else hitMagnitude = 70;
 	
 			magnitudeCount = 0;

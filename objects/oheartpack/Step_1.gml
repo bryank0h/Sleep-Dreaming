@@ -4,7 +4,18 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != StartofDream && ro
 	{
 		touched = 1;
 		oPlayer.heartWithMe = true;
-		oEnemy.heartAttackChecked = false;
+		if (instance_exists(oEnemy)) oEnemy.heartAttackChecked = false;
 	}
 }
 
+if (room == LevelBoss && instance_exists(oEnemy) && instance_exists(oHeartPack))
+{
+	if (oEnemy.bossHP <= 0)
+	{
+		audio_sound_gain(oSound1.sound, 0, 6000);
+		instance_create_layer(oEnemy.x, oEnemy.y, oDead);
+		instance_destroy(oEnemy);
+		if (instance_exists(oHeartParticle)) instance_destroy(oHeartParticle);
+		instance_destroy();
+	}
+}

@@ -5,7 +5,12 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 	hSpeed = lengthdir_x(speedWalk, inputDirection);
 	vSpeed = lengthdir_y(speedWalk, inputDirection);
 
-	PlayerCollision();
+	if (room != LevelBoss) PlayerCollision();
+	else
+	{
+		x += hSpeed;
+		y += vSpeed;
+	}
 
 	// Image Manipulate
 	if (hSpeed != 0 || vSpeed != 0) 
@@ -20,6 +25,40 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 
 	if (inputDirection > 90 && inputDirection < 270) image_xscale = -1;
 	else image_xscale = 1;
+	
+	if (room == LevelBoss && instance_exists(oPlayer))
+	{
+		vulnerable--;
+		if (place_meeting(x,y,oHeartPack))
+		{
+			if (vulnerable <= 0) 
+			{
+				audio_play_sound(Bump,900,false);
+				bossHP -= 3;
+				flash = 20;
+				show_debug_message("Enemy Hit");
+			}		
+			vulnerable = 15;
+		}
+		if (place_meeting(x,y,oFire))
+		{
+			with(instance_place(x, y, oFire))
+			{
+				if (timeAlive < 200)
+				{
+					if (oEnemy.vulnerable <= 0) 
+					{
+						audio_play_sound(Bump,900,false);
+						oEnemy.bossHP--;
+						oEnemy.flash = 20;
+						show_debug_message("Enemy Hit");
+					}		
+					oEnemy.vulnerable = 15;
+					instance_destroy();
+				}
+			}
+		}
+	}
 	
 	if (heartAttack)
 	{
@@ -39,12 +78,17 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 			heartAttackDelay--;
 			if (fireBlastCountdown <= 0)
 			{
-				with (instance_create_layer(x, y-7, "Fire", oFire))
+				with (instance_create_layer(x, y-8, "Fire", oFire))
 				{
-					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y-3);
+					direction = point_direction(other.x, other.y, oPlayer.x, oPlayer.y-5);
 					image_angle = direction;
 				}
-				if (room == Level4) fireBlastCountdown = 75;
+				if (room == Level4 || room == Level5 || room == Level6 || room == Level7) fireBlastCountdown = 75;
+				else if (room == LevelBoss) 
+				{
+					if (bossHP > bossMaxHP/2) fireBlastCountdown = 25;
+					else fireBlastCountdown = 15;
+				}
 				else fireBlastCountdown = 100;
 			}
 			if (heartAttackDelay <= 0)
@@ -55,9 +99,15 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 				heartAttackDelay = 0;
 				heartAttackDelaySet = false;
 				visibleCondition = false;
-				if (room == Level1 || room == Level2 || room == Level3 ) speedWalk = 0.5;
+				if (room == Level1) speedWalk = 0.4;
+				else if (room == Level2 || room == Level3 ) speedWalk = 0.5;
 				else if (room == Level4 || room == Level5) speedWalk = 0.6;
 				else if (room == Level6 || room == Level7) speedWalk = 0.65;
+				else if (room == LevelBoss) 
+				{
+					if (bossHP > bossMaxHP/2) speedWalk = 1.6;
+					else speedWalk = 2;
+				}
 				instance_destroy(oHeartParticle);
 			}
 		}

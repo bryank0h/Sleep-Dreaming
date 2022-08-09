@@ -37,6 +37,7 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping || room == LoadAtA
 				{
 					sound = audio_play_sound(Infiltration,1000,true);
 					soundPlayed = true;
+					SaveGame();
 				}
 				else if (room == AfterLevel3)
 				{
@@ -47,6 +48,7 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping || room == LoadAtA
 						layer_set_visible("Floor", true);
 						oRightDoor.visible = true;
 						oSound1.soundPlayed = false;
+						SaveGame();
 					}
 				}
 				else if (room == LoadAtAfterLevel3)
@@ -56,19 +58,40 @@ if (keyboard_check_pressed(ord("E")) || room == HouseSleeping || room == LoadAtA
 				}
 				else if (room == AfterLevel7)
 				{
+					SaveGame();
+					if (oPlayer.x > 85 && oPlayer.x < 120)
+					{
+						oSound1.soundPlayed = true;
+						audio_play_sound(Who, 1000, true);
+					}
 					if (oPlayer.x > 192 && oPlayer.x < 222)
 					{
+						audio_stop_all();
 						oEnemy.visible = false;
 						layer_set_visible("Floor", true);
 						oRightDoor.visible = true;
 						oSound1.soundPlayed = false;
 					}			
 				}
+				else if (room == GoingToBoss)
+				{
+					SaveGame();
+				}
+				else if (room == LevelBoss)
+				{
+					audio_stop_all();
+					oSound1.sound = audio_play_sound(theEpic2, 1000, true);
+					oSound1.soundPlayed = true;
+				}
+				else if (room == AfterDream)
+				{
+					global.gameFinished = true;
+				}
 			}
 		}
 		else
 		{
-			if (textProgress > 2 && room != HouseSleeping && room != AfterLevel3 && room != LoadAtAfterLevel3)
+			if (textProgress > 2 && room != HouseSleeping && room != AfterLevel3 && room != LoadAtAfterLevel3 && room != AfterLevel7 && room != LevelBoss)
 			{
 				textProgress = _messageLength;
 			}

@@ -4,7 +4,7 @@ function SetPlayerSpeed(){
 	if (room == Home || room == House || room == StartofDream)
 	{
 		//speedWalk = 0.13;
-		return 2;
+		return 0.15;
 	}
 	else if (room == AfterLevel3 || room == AfterLevel7)
 	{

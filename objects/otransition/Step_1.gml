@@ -62,6 +62,10 @@ if (leading == OUT)
 		{
 			room_goto(GoingToBoss);
 		}
+		else if (room == GoingToBoss)
+		{
+			room_goto(LevelBoss);
+		}
 		else if (is_numeric(roomToGoTo)) room_goto(roomToGoTo);
 		else
 		{
@@ -74,9 +78,9 @@ if (leading == OUT)
 }
 else
 {
-	if (room != House || room != HouseSleeping) percent = max(0, percent - TRANSITION_SPEED);
+	if (room != House && room != HouseSleeping && room != AfterLevel3 && room != AfterLevel7) percent = max(0, percent - TRANSITION_SPEED);
 	else if (room == House) percent = max(0, percent - 0.03);
-	else if (room == HouseSleeping)  percent = max(0, percent - 0.001);
+	else if (room == HouseSleeping || room == AfterLevel3 || room == AfterLevel7)  percent = max(0, percent - 0.01);
 	if (percent <= 0)
 	{
 		instance_destroy();

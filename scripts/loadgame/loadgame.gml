@@ -9,6 +9,8 @@ function LoadGame(_slot){
 		if (!instance_exists(oSound1)) instance_create_layer(7, -17, "Audio", oSound1);
 		global.sound = _json[? "audio"];
 		global.soundPlayed = _json[? "audioPlayed"];
+		global.gameFinished = false;
+		global.readAwake = false;
 		
 		//RoomTransition(TRANS_TYPE.SLIDE);
 		if (room_get_name(_json[? "room"]) == "AfterLevel3") global.room = LoadAtAfterLevel3;

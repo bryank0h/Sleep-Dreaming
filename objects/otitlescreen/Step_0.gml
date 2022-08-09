@@ -49,4 +49,9 @@ if (keyboard_check_pressed(vk_delete) && (keyPressed) && (!keyPressed2) && (!loa
 	}
 }
 
+if (keyboard_check_pressed(vk_escape) && (keyPressed) && (!keyPressed2) && (!loadingStarted))
+{
+	room_restart();
+}
+
 if (keyboard_check_pressed(ord("E"))) keyPressed = true;

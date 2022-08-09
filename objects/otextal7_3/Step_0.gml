@@ -3,7 +3,6 @@ if (TextCreated == false)
 	if (place_meeting(x,y,oPlayer))
 	{
 		layer_set_visible("Floor", false);
-		audio_stop_all();
 		oEnemy.image_xscale = -1;
 		NewTextBox("The Other Justin:\n...");
 		NewTextBox("The Other Justin:\nHi.");

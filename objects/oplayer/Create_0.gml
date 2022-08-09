@@ -33,3 +33,6 @@ vulnerable = 0;
 HPDeducted = false;
 dead = 0;
 heartWithMe = true;
+
+leaveTheRoom = 0;
+screenShook = false;

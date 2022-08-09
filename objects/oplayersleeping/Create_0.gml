@@ -12,3 +12,8 @@ key10 = false;
 left = false;
 right = true;
 delay = 0;
+
+audioStopped = false;
+spriteChange = 50;
+spriteChanged = false;
+endSoundPlayed = false;

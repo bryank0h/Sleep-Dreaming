@@ -41,4 +41,41 @@ if (room == Cheating)
 	}
 }
 
+if (room == AfterDream)
+{
+	if (!audioStopped)
+	{
+		audio_stop_all();
+		audioStopped = true;
+	}
+	if (spriteChange > 0)
+	{
+		spriteChange--;
+	}
+	else
+	{
+		if (!spriteChanged)
+		{
+			if (!endSoundPlayed)
+			{
+				oSound1.sound = audio_play_sound(End, 1000, true);
+				oSound1.soundPlayed = true;
+				endSoundPlayed = true;
+			}
+			sprite_index = sPlayer;
+			image_speed = 0;
+			spriteChanged = true;
+			global.readAwake = true;
+		}
+	}
+	
+	if (global.gameFinished)
+	{
+		if (keyboard_check_pressed(ord("E")))
+		{
+			game_restart();
+		}
+	}
+}
+
 
