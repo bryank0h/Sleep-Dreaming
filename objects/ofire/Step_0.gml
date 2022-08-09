@@ -23,6 +23,11 @@ if (!global.gamePaused)
 			gotReflected = true;
 		}
 	}
+	
+	if (room == LevelBoss && !instance_exists(oEnemy))
+	{
+		instance_destroy();
+	}
 
 	if (instance_exists(oBox1))
 	{

@@ -5,6 +5,10 @@ if (!keyPressed)
 	{
 		slotsVisible = max(0, slotsVisible - 0.03);
 	}
+	if (keyboard_check_pressed(vk_escape))
+	{
+		game_end();
+	}
 }
 else
 {

@@ -106,7 +106,7 @@ if (instance_exists(oPlayer) && !global.gamePaused && room != AfterLevel3 && roo
 				else if (room == LevelBoss) 
 				{
 					if (bossHP > bossMaxHP/2) speedWalk = 1.6;
-					else speedWalk = 2;
+					else speedWalk = 3;
 				}
 				instance_destroy(oHeartParticle);
 			}

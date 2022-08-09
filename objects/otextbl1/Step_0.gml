@@ -16,7 +16,7 @@ if (TextCreated == false  && !global.readBoss)
 		NewTextBox("The Other Justin:\nGood... good.");
 		NewTextBox("The Other Justin:\nIf that's the case, come at me with everything you have.");
 		NewTextBox("The Other Justin:\nVent your frustrations away.");
-		NewTextBox("The Other Justin:\nBecause at the end of the day, all we have is...");
+		NewTextBox("The Other Justin:\nBecause by the end of the day, all we have is...");
 		NewTextBox("The Other Justin:\n\"Me\".");
 		NewTextBox("(Justin's Heart steels itself with resolve!)");
 		TextCreated = true;
