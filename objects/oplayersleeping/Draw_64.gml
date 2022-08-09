@@ -15,6 +15,6 @@ if (global.gameFinished)
 	draw_text(RESOLUTION_W * 0.5, RESOLUTION_H * 0.5 - 15, "Stay Strong :)");
 	draw_text(RESOLUTION_W * 0.5, RESOLUTION_H * 0.5, "Game Created for GPN Assignment 2");
 	
-	
+	draw_text(RESOLUTION_W * 0.5, RESOLUTION_H * 0.5 + 15, "(Do not press the spacebar 10 times, nothing will happen.)")
 }
 
